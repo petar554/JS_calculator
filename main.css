@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(230, 225, 225);
+}
+
+#container{
+    background-image: url("https://images.unsplash.com/photo-1518665750801-883c188a660d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 1000px;
+    margin: 100px auto;
+}
+
+#calculator{
+    background-color: black;
+    width: 280px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    border-radius: 30px;
+}
+ 
+#result{
+    height: 130px;
+}
+#keyboard{
+    height: 250px;
+}
+
+#history{
+    text-align: right;
+    color: white;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+}
+#output{
+    text-align: right;
+    color: white;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 40px;
+}
+
+#output-value{
+    margin: 0;
+}
+
+#keyboard{
+    height: 400px;
+}
+
+button{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    float: left;
+}
+
+button:nth-of-type(4n){
+    background-color: rgb(255, 151, 15);
+}
+button:last-child{
+    background-color: rgb(255, 151, 15);
+}
+
+.numberZero{
+    width: 120px;
+    border-radius: 30px;
+}
+
+.number{
+    color: white;
+    background-color: rgb(65, 65, 65);
+}
