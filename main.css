@@ -55,11 +55,27 @@ button{
     width: 50px;
     margin: 10px;
     border-radius: 50%;
+    border-width: 0;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
     float: left;
+}
+
+button:focus{
+    outline: 0;
+}
+
+button:active{
+    font-size: 13px;
 }
 
 button:nth-of-type(4n){
     background-color: rgb(255, 151, 15);
+}
+
+button:nth-of-type(-n + 3){
+    background-color: rgb(150, 148, 148);
 }
 button:last-child{
     background-color: rgb(255, 151, 15);
@@ -70,7 +86,7 @@ button:last-child{
     border-radius: 30px;
 }
 
-.number{
+.number,.point{
     color: white;
     background-color: rgb(65, 65, 65);
 }
