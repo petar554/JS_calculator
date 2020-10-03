@@ -39,4 +39,35 @@ for (let i = 0; i < number.length; i++) {
     });
 }
 
-
+let operator = document.querySelectorAll('.operator');
+for (let i = 0; i < operator.length; i++) {
+    operator[i].addEventListener('click', function () {
+        //alert('SOMETHING CLICKED ' + this.id);
+        if (this.id === 'clear') {
+            printHistoty('');
+            printOutput('');
+        } else if (this.id === 'backspace') {
+            if (output) {
+                let output = reverseNumberFormat(getOutput()).toString();
+                output = output.substring(0, output.length - 1)
+                printOutput(output);
+            }
+        } else {
+            let history = getHistory()
+            let output = getOutput();
+            if (output != NaN) {
+                output = reverseNumberFormat(output);
+                history = history + output;
+                if (this.id === '=') {
+                    let result = eval(history);
+                    printOutput(result);
+                    printHistoty('');
+                } else {
+                    history = history + this.id;
+                    printHistoty(history);
+                    printOutput('')
+                }
+            }
+        }
+    });
+}
